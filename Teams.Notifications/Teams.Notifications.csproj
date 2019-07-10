@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.1.1</Version>
+    <Authors>Niels Freier</Authors>
+    <Description>Allow you to easily send notification to Microsoft Teams channels by using Webhook</Description>
+    <PackageProjectUrl>https://github.com/stumpyfr/Teams.Notifications</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/stumpyfr/Teams.Notifications</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+</Project>
