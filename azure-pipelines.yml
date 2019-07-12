@@ -5,6 +5,8 @@
 
 trigger:
 - master
+- feature/*
+- hotfix/*
 
 pool:
   vmImage: 'vs2017-win2016'
@@ -20,6 +22,7 @@ steps:
     arguments: '--configuration Release' # Update this to match your need
     
 - task: DotNetCoreCLI@2
+  displayName: Tests
   inputs:
     command: test
     projects: '*.Tests/*.csproj'
