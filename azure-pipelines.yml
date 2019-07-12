@@ -12,7 +12,6 @@ pool:
 steps:
 - script: dotnet restore
 
-steps:
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
