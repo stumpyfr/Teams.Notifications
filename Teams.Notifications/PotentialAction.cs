@@ -5,6 +5,17 @@ namespace Teams.Notifications
 {
     public class PotentialAction
     {
+        public PotentialAction()
+        {
+            this.Targets = new List<PotentialActionLink>();
+        }
+
+        public PotentialAction(string name)
+        {
+            this.Name = name;
+            this.Targets = new List<PotentialActionLink>();
+        }
+
         [JsonProperty("@type")]
         public string Type { get; } = "OpenUri";
 
