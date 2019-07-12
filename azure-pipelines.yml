@@ -20,6 +20,7 @@ steps:
     arguments: '--configuration Release' # Update this to match your need
     
 - task: DotNetCoreCLI@2
+  displayName: Tests
   inputs:
     command: test
     projects: '*.Tests/*.csproj'
