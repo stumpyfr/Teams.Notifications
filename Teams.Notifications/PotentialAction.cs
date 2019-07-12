@@ -24,16 +24,5 @@ namespace Teams.Notifications
 
         [JsonProperty("targets")]
         public IList<PotentialActionLink> Targets { get; set; }
-
-	public PotentialAction()
-        {
-            this.Targets = new List<PotentialActionLink>();
-        }
-
-        public PotentialAction(string name)
-        {
-            this.Name = name;
-            this.Targets = new List<PotentialActionLink>();
-        }
     }
 }
