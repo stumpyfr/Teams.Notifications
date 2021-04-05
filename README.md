@@ -1,14 +1,12 @@
 # Teams Notification
 
-[![Build Status](https://dev.azure.com/stumpyfr/Stumpy/_apis/build/status/stumpyfr.Teams.Notifications?branchName=master)](https://dev.azure.com/stumpyfr/Stumpy/_build/latest?definitionId=1&branchName=master) ![Nuget](https://img.shields.io/nuget/dt/Teams.Notifications)
-
 ## Introduction
 
 Library to easily send notification to Microsoft Teams channels.
 
 ## Code Samples
 
-```
+```csharp
 var url = "<INSERT WEBHOOK URL HERE>";
 var client = new TeamsNotificationClient(url);
 
@@ -46,6 +44,6 @@ client.PostMessage(message).GetAwaiter().GetResult();
 
 ## Installation
 
-```
+```console
 dotnet add package Teams.Notifications
 ```
