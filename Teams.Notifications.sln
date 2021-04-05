@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teams.Notifications", "Teams.Notifications\Teams.Notifications.csproj", "{FDBD2439-E36A-4DCB-BE53-3202377E4964}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teams.Notifications", "src\Teams.Notifications\Teams.Notifications.csproj", "{FDBD2439-E36A-4DCB-BE53-3202377E4964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teams.Notifications.Client", "Teams.Notification.Client\Teams.Notifications.Client.csproj", "{5C4D1190-3407-47DF-A153-B84E7744637D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teams.Notifications.Client", "src\Teams.Notification.Client\Teams.Notifications.Client.csproj", "{5C4D1190-3407-47DF-A153-B84E7744637D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{571A911F-0FE9-412D-9C54-316E4C01EF0C}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teams.Notifications.Tests", "Teams.Notifications.Tests\Teams.Notifications.Tests.csproj", "{C8AD3F2F-B0E8-4C01-B8CE-D06906957FAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teams.Notifications.Tests", "test\Teams.Notifications.Tests\Teams.Notifications.Tests.csproj", "{C8AD3F2F-B0E8-4C01-B8CE-D06906957FAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -17,6 +17,22 @@ env:
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
 
 jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: 3.1
+      - name: Restore Tool
+        run: dotnet tool restore
+      - name: Add Problem Matcher for dotnet-format
+        uses: xt0rted/dotnet-format-problem-matcher@v1
+      - name: Lint
+        run: dotnet format --check
+
   test:
     name: Debug Build & Test
     runs-on: ubuntu-20.04
@@ -28,10 +44,6 @@ jobs:
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           restore-keys: |
             ${{ runner.os }}-nuget-
-      - name: Setup .NET Core 2.1 SDK
-        uses: actions/setup-dotnet@v1.7.2
-        with:
-          dotnet-version: 2.1
       - name: Setup .NET Core 3.1 SDK
         uses: actions/setup-dotnet@v1.7.2
         with:

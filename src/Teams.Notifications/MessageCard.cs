@@ -1,5 +1,5 @@
-using Newtonsoft.Json;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Teams.Notifications
 {
@@ -12,18 +12,18 @@ namespace Teams.Notifications
         public string Context { get; } = "http://schema.org/extensions";
 
         [JsonProperty("title")]
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         [JsonProperty("text")]
-        public string Text { get; set; }
+        public string? Text { get; set; }
 
         [JsonProperty("themeColor")]
-        public string Color { get; set; }
+        public string? Color { get; set; }
 
         [JsonProperty("sections")]
-        public IList<MessageSection> Sections { get; set; }
+        public IList<MessageSection>? Sections { get; set; }
 
         [JsonProperty("potentialAction")]
-        public IList<PotentialAction> PotentialActions { get; set; }
+        public IList<PotentialAction>? PotentialActions { get; set; }
     }
 }

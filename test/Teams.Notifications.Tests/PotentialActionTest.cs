@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 
 namespace Teams.Notifications.Tests
@@ -12,7 +11,7 @@ namespace Teams.Notifications.Tests
 
             Assert.NotNull(data.Targets);
             Assert.Equal("OpenUri", data.Type);
-            Assert.Null(data.Name);
+            Assert.Equal("", data.Name);
         }
 
         [Theory]

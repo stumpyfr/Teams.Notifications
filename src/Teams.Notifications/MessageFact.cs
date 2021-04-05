@@ -5,9 +5,9 @@ namespace Teams.Notifications
     public class MessageFact
     {
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [JsonProperty("value")]
-        public string Value { get; set; }
+        public string? Value { get; set; }
     }
 }

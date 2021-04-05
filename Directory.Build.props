@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <!-- Meta Options -->
+    <Authors>Nogic</Authors>
+    <Copyright>©2021 Nogic</Copyright>
+    <PackageProjectUrl>https://github.com/nogic1008/Teams.Notifications</PackageProjectUrl>
+    <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <!-- Build Options -->
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <RepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\'))</RepoRoot>
+    <PathMap>$(RepoRoot)=.</PathMap>
+  </PropertyGroup>
+</Project>
