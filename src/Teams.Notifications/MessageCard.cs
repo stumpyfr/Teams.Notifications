@@ -1,29 +1,29 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace Teams.Notifications
 {
     public class MessageCard
     {
-        [JsonProperty("@type")]
+        [JsonPropertyName("@type")]
         public string Type { get; } = "MessageCard";
 
-        [JsonProperty("@context")]
+        [JsonPropertyName("@context")]
         public string Context { get; } = "http://schema.org/extensions";
 
-        [JsonProperty("title")]
+        [JsonPropertyName("title")]
         public string? Title { get; set; }
 
-        [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public string? Text { get; set; }
 
-        [JsonProperty("themeColor")]
+        [JsonPropertyName("themeColor")]
         public string? Color { get; set; }
 
-        [JsonProperty("sections")]
+        [JsonPropertyName("sections")]
         public IList<MessageSection>? Sections { get; set; }
 
-        [JsonProperty("potentialAction")]
+        [JsonPropertyName("potentialAction")]
         public IList<PotentialAction>? PotentialActions { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace Teams.Notifications
 {
@@ -9,13 +9,13 @@ namespace Teams.Notifications
 
         public PotentialAction(string name) => Name = name;
 
-        [JsonProperty("@type")]
+        [JsonPropertyName("@type")]
         public string Type { get; } = "OpenUri";
 
-        [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        [JsonProperty("targets")]
+        [JsonPropertyName("targets")]
         public IList<PotentialActionLink> Targets { get; set; } = new List<PotentialActionLink>();
     }
 }

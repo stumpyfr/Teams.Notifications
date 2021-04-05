@@ -1,14 +1,14 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace Teams.Notifications
 {
     public class MessageSection
     {
-        [JsonProperty("title")]
+        [JsonPropertyName("title")]
         public string? Title { get; set; }
 
-        [JsonProperty("facts")]
+        [JsonPropertyName("facts")]
         public IList<MessageFact>? Facts { get; set; }
     }
 }
