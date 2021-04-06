@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Teams.Notifications.Entities;
+using Nogic.Teams.Notifications.Entities;
 
-namespace Teams.Notifications.Client
+namespace Nogic.Teams.Notifications.Client
 {
     internal static class Program
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace Teams.Notifications.Entities
+namespace Nogic.Teams.Notifications.Entities
 {
     public record OpenUriAction(
         [property: JsonPropertyName("name")] string Name,

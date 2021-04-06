@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace Teams.Notifications.Tests
+namespace Nogic.Teams.Notifications.Tests
 {
     public static class JsonConfig
     {

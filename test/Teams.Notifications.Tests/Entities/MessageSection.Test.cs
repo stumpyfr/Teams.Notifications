@@ -1,10 +1,10 @@
 using System;
 using System.Text.Json;
 using FluentAssertions;
-using Teams.Notifications.Entities;
+using Nogic.Teams.Notifications.Entities;
 using Xunit;
 
-namespace Teams.Notifications.Tests.Entities
+namespace Nogic.Teams.Notifications.Tests.Entities
 {
     /// <summary>
     /// Unit test for <see cref="MessageSection"/>

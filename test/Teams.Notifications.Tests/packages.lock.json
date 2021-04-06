@@ -603,6 +603,14 @@
           "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         }
       },
+      "System.Net.Http.Json": {
+        "type": "Transitive",
+        "resolved": "5.0.0",
+        "contentHash": "3CPSQpCzEmI9o+1G79TnPCjF40omCdnoXj2Rg76BDwGj5+LZnFPjV+t35eedlvl+uthmholk/XXxXTYgJWSexw==",
+        "dependencies": {
+          "System.Text.Json": "5.0.0"
+        }
+      },
       "System.Net.Primitives": {
         "type": "Transitive",
         "resolved": "4.3.0",
@@ -739,6 +747,11 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
+      },
+      "System.Runtime.CompilerServices.Unsafe": {
+        "type": "Transitive",
+        "resolved": "5.0.0",
+        "contentHash": "ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA=="
       },
       "System.Runtime.Extensions": {
         "type": "Transitive",
@@ -977,10 +990,19 @@
           "System.Text.Encoding": "4.3.0"
         }
       },
-      "System.Text.Json": {
+      "System.Text.Encodings.Web": {
         "type": "Transitive",
         "resolved": "5.0.1",
-        "contentHash": "/UM3UK1dXKl8Ybysg/21gM4S8DJgkR+yLU8JwqCVbuNqQNImelntgYFAN5QxR8sJJ1kMx//hOUdf0lltosi8cQ=="
+        "contentHash": "KmJ+CJXizDofbq6mpqDoRRLcxgOd2z9X3XoFNULSbvbqVRZkFX3istvr+MUjL6Zw1RT+RNdoI4GYidIINtgvqQ=="
+      },
+      "System.Text.Json": {
+        "type": "Transitive",
+        "resolved": "5.0.2",
+        "contentHash": "I47dVIGiV6SfAyppphxqupertT/5oZkYLDCX6vC3HpOI4ZLjyoKAreUoem2ie6G0RbRuFrlqz/PcTQjfb2DOfQ==",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0",
+          "System.Text.Encodings.Web": "5.0.1"
+        }
       },
       "System.Text.RegularExpressions": {
         "type": "Transitive",
@@ -1115,10 +1137,11 @@
           "xunit.extensibility.core": "[2.4.1]"
         }
       },
-      "teams.notifications": {
+      "nogic.teams.notifications": {
         "type": "Project",
         "dependencies": {
-          "System.Text.Json": "5.0.1"
+          "System.Net.Http.Json": "[5.0.0, 6.0.0)",
+          "System.Text.Json": "[5.0.0, 6.0.0)"
         }
       }
     }
