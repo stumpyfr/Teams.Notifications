@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Teams.Notifications.Entities;
 
 namespace Teams.Notifications.Client
 {
@@ -10,41 +11,31 @@ namespace Teams.Notifications.Client
             const string url = "";
             var client = new TeamsNotificationClient(url);
 
-            var message = new MessageCard
-            {
-                Title = "title",
-                Text = "text",
-                Color = "f0ad4e",
-                Sections = new List<MessageSection>
+            var message = new MessageCard(
+                Title: "title",
+                Text: "text",
+                ThemeColor: "f0ad4e",
+                Sections: new List<MessageSection>
                 {
-                    new MessageSection()
-                    {
-                        Title = "Context",
-                        Facts = new List<MessageFact>()
+                    new (
+                        Title: "Context",
+                        Facts: new List<MessageFact>
                         {
-                            new MessageFact()
-                            {
-                                Name = "Key",
-                                Value = "Value"
-                            }
+                            new ("Key", "Value")
                         }
-                    }
+                    )
                 },
-                PotentialActions = new List<PotentialAction>
+                PotentialActions: new List<OpenUriAction>
                 {
-                    new PotentialAction()
-                    {
-                        Name = "Open",
-                        Targets = new List<PotentialActionLink>()
+                    new (
+                        Name: "Open",
+                        Targets: new List<OpenUriTarget>
                         {
-                            new PotentialActionLink()
-                            {
-                                Value = "http://google.com"
-                            }
+                            new ("http://google.com")
                         }
-                    }
+                    )
                 }
-            };
+            );
             await client.PostMessageAsync(message).ConfigureAwait(false);
         }
     }
