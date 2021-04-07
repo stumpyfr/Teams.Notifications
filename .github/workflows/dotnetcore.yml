@@ -54,7 +54,7 @@ jobs:
           dotnet-version: 5.0.x
 
       - name: Restore
-        run: dotnet restore --locked-mode
+        run: dotnet restore
       - name: Debug Build
         run: dotnet build --no-restore
       - name: Test
