@@ -1,5 +1,11 @@
 # Teams Notification
 
+[![.NET Core CI](https://github.com/nogic1008/Teams.Notifications/actions/workflows/dotnetcore.yml/badge.svg)](https://github.com/nogic1008/Teams.Notifications/actions/workflows/dotnetcore.yml)
+[![last commit](https://img.shields.io/github/last-commit/nogic1008/Teams.Notifications "last commit")](https://github.com/nogic1008/Teams.Notifications/commits/master)
+[![codecov](https://codecov.io/gh/nogic1008/Teams.Notifications/branch/master/graph/badge.svg?token=jqYZoyBoYq)](https://codecov.io/gh/nogic1008/Teams.Notifications)
+[![CodeFactor](https://www.codefactor.io/repository/github/nogic1008/teams.notifications/badge)](https://www.codefactor.io/repository/github/nogic1008/teams.notifications)
+[![License](https://img.shields.io/github/license/nogic1008/Teams.Notifications)](LICENSE)
+
 ## Introduction
 
 Library to easily send notification to Microsoft Teams channels.
