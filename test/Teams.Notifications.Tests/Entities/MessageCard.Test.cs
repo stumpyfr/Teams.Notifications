@@ -18,10 +18,17 @@ namespace Nogic.Teams.Notifications.Tests.Entities
         public void CanSerializeJSON()
         {
             // Arrange
+            const string summary = "Summary";
             const string title = "Title";
             const string text = "Text";
             const string color = "FF0000";
-            var sut = new MessageCard(title, text, color, Sections: Array.Empty<MessageSection>());
+            var sut = new MessageCard(
+                Summary: summary,
+                ThemeColor: color,
+                Title: title,
+                Text: text,
+                Sections: Array.Empty<MessageSection>()
+            );
 
             // Act
             string json = JsonSerializer.Serialize(sut, JsonConfig.Default);
@@ -29,6 +36,7 @@ namespace Nogic.Teams.Notifications.Tests.Entities
             // Assert
             json.Should().Contain(Type)
                 .And.Contain(Context)
+                .And.Contain("\"summary\":\"" + summary + "\"")
                 .And.Contain("\"title\":\"" + title + "\"")
                 .And.Contain("\"text\":\"" + text + "\"")
                 .And.Contain("\"themeColor\":\"" + color + "\"")
@@ -43,14 +51,21 @@ namespace Nogic.Teams.Notifications.Tests.Entities
             new object[]
             {
                 "{" + Type + "," + Context + ",\"title\":\"Simple Message\",\"text\":\"Message Body\"}",
-                new MessageCard("Simple Message", "Message Body"),
+                new MessageCard(Title: "Simple Message", Text: "Message Body"),
             },
             new object[]
             {
-                "{" + Type + "," + Context + ",\"title\":\"Empty Array\","
+                "{" + Type + "," + Context + ",\"summary\":\"Array is Empty\",\"title\":\"Empty Array\","
                 + "\"text\":\"Message Body\",\"themeColor\":\"FF0000\","
                 + "\"sections\":[],\"potentialAction\":[]}",
-                new MessageCard("Empty Array", "Message Body", "FF0000", Array.Empty<MessageSection>(), Array.Empty<OpenUriAction>()),
+                new MessageCard(
+                    Summary: "Array is Empty",
+                    ThemeColor: "FF0000",
+                    Title: "Empty Array",
+                    Text: "Message Body",
+                    Sections: Array.Empty<MessageSection>(),
+                    PotentialActions: Array.Empty<OpenUriAction>()
+                ),
             },
         };
         [Theory]
