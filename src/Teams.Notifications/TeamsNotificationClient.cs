@@ -1,7 +1,4 @@
-using System;
-using System.Net.Http;
 using System.Net.Http.Json;
-using System.Threading.Tasks;
 using Nogic.Teams.Notifications.Entities;
 
 namespace Nogic.Teams.Notifications;

@@ -23,4 +23,9 @@
     <ProjectReference Include="../../src/Teams.Notifications/Nogic.Teams.Notifications.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="FluentAssertions" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+
 </Project>

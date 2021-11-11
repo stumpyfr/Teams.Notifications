@@ -1,8 +1,5 @@
-using System;
 using System.Text.Json;
-using FluentAssertions;
 using Nogic.Teams.Notifications.Entities;
-using Xunit;
 
 namespace Nogic.Teams.Notifications.Tests.Entities;
 

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Nogic.Teams.Notifications;
 using Nogic.Teams.Notifications.Entities;
 
