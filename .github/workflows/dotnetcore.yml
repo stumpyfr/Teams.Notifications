@@ -22,16 +22,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - name: Setup .NET 5 SDK
-        uses: actions/setup-dotnet@v1.7.2
-        with:
-          dotnet-version: 5.0.x
-      - name: Restore Tool
-        run: dotnet tool restore
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v1.8.2
       - name: Add Problem Matcher for dotnet-format
         uses: xt0rted/dotnet-format-problem-matcher@v1
       - name: Lint
-        run: dotnet format --check
+        run: dotnet format --verify-no-changes --verbosity detailed
 
   test:
     name: Debug Build & Test
@@ -48,10 +44,8 @@ jobs:
         uses: actions/setup-dotnet@v1.8.2
         with:
           dotnet-version: 3.1.x
-      - name: Setup .NET 5 SDK
+      - name: Setup .NET SDK
         uses: actions/setup-dotnet@v1.8.2
-        with:
-          dotnet-version: 5.0.x
 
       - name: Restore
         run: dotnet restore
